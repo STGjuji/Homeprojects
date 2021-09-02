@@ -3,8 +3,7 @@
     padding: 0;
 }
 
-body,
-html {
+body, html {
     height: 100%;
     font-family: sans-serif;
 }
@@ -22,9 +21,9 @@ body {
 .episode-list-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-bottom: 1px dashed #cecece;
     padding: 10px 0;
-    justify-content: space-between;
 }
 
 .episode-list-item.is-current i {
@@ -33,7 +32,7 @@ body {
 }
 
 .episode-list-item .position {
-    color: #00b1b4;
+    color: #00B1B4;
     font-weight: bold;
 }
 
