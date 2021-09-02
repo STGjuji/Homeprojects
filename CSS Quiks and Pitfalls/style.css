@@ -1,0 +1,27 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header,
+footer {
+    background: #c5c5c5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container>* {
+    padding: 0 20px;
+}
+
+¢
