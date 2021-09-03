@@ -3,10 +3,6 @@
     padding: 0;
 }
 
-:root {
-    --tw-shadow: 0 40px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
 body {
     font-family: sans-serif;
 }
@@ -14,7 +10,8 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 40px;
+    background: #00b1b3;
+
 }
 
 @media screen and (max-width: 767px) {
@@ -24,15 +21,6 @@ nav {
     nav a {
         display: block;
     }
-}
-
-.bg-img {
-    background-image: url("././images/eating.jpeg");
-    min-height: 380px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
 }
 
 .nav-item {

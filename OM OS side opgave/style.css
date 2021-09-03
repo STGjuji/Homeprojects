@@ -36,3 +36,7 @@ nav {
     color: #005152;
     padding-right: 6px;
 }
+
+#nav_center {
+    -webkit-box-align: center;
+}
