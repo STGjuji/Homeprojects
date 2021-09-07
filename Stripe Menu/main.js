@@ -1,6 +1,7 @@
 const menuItems = document.querySelectorAll('nav ul li');
 const menuBackground = document.querySelector('.menu-background');
 const nav = document.querySelector('nav ul');
+const arrow = document.querySelector('.arrow');
 
 menuItems.forEach(menuItem => menuItem.addEventListener('mouseenter', handleEnter))
 menuItems.forEach(menuItem => menuItem.addEventListener('mouseleave', handleLeave))
@@ -15,6 +16,7 @@ function handleEnter() {
     const navCoords = nav.getBoundingClientRect()
 
     menuBackground.classList.add('open')
+    arrow.classList.add('open')
 
     // menuBackground.style.setProperty('width', `${menuCoords.width}px`)
     // menuBackground.style.setProperty('height', `${menuCoords.height}px`)
@@ -23,7 +25,16 @@ function handleEnter() {
     menuBackground.style.setProperty('transform',
         `
         translate(${menuCoords.left}px, ${menuCoords.top + window.scrollY}px)
+        scaleX(${menuCoords.width/100})
+        scaleY(${menuCoords.width/100})
         `
+    )
+    arrow.style.setProperty('transform',
+        `
+    translate(${menuCoords.left + (menuCoords.width / 2)}px, ${menuCoords.top + -navCoords.top}px)
+    rotate(45deg) translateY(-50%)
+
+    `
     )
 }
 
@@ -32,6 +43,7 @@ function handleLeave() {
 
     menu.classList.remove('menu-enter', 'menu-enter-active')
     menuBackground.classList.remove('open')
+    arrow.classList.remove('open')
 
     //   menu.classList.add('menu-leave')
     //    setTimeout(() => menu.classList.add('menu-leave-active'), 50)
