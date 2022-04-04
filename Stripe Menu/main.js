@@ -17,12 +17,7 @@ function handleEnter() {
 
     menuBackground.classList.add('open')
     arrow.classList.add('open')
-
-    // menuBackground.style.setProperty('width', `${menuCoords.width}px`)
-    // menuBackground.style.setProperty('height', `${menuCoords.height}px`)
-    // menuBackground.style.setProperty('top', `${menuCoords.top + window.scrollY}px`)
-    // menuBackground.style.setProperty('left', `${menuCoords.left}px`)
-
+    
     menuBackground.style.setProperty('transform',
         `
       translate(${menuCoords.left}px, ${menuCoords.top + window.scrollY}px)
